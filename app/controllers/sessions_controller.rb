@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
         if user && user.authenticate(params[:session][:password])
             flash[:success] = "Logged in!"
             session[:user_id] = user.id
-            redirect_to user_path(user)
+            redirect_to root_path
         else
             flash.now[:danger] = "You messed up, A-aron."
             render 'new'
