@@ -13,7 +13,7 @@ class UsersController < ApplicationController
     if @user.save
       flash[:success] = "Welcome to the chat app"
       session[:user_id] = @user.id
-
+      redirect_to root_path(@user)
 
     else
       render 'login'

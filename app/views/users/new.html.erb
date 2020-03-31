@@ -11,7 +11,7 @@
 <div class="ui placeholder segment">
   <div class="ui two column center aligned very relaxed stackable grid">
     <div class="column">
-      <%= form_for(@user, html: {class: "ui form", role: "form"}, url: login_path) do |f| %>
+      <%= form_for(@user, html: {class: "ui form", role: "form"}) do |f| %>
         <div class="field">
           <%= f.label :username, "Username" %>
           <div class="ui left icon input">
