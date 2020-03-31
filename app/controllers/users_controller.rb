@@ -16,7 +16,8 @@ class UsersController < ApplicationController
       redirect_to root_path(@user)
 
     else
-      render 'login'
+      flash.now[:danger] = "You messed up, A-aron."
+      render 'new'
     end
 
   end
